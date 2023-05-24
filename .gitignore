@@ -1,0 +1,10 @@
+device/*
+kernel_platform/prebuilts/*
+kernel_platform/prebuilts-master/*
+kernel_platform/out/*
+out/*
+
+kernel_platform/build.config
+exports.txt
+vendor/qcom/opensource/*
+
