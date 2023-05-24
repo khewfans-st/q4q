@@ -2787,7 +2787,7 @@ int stm_ts_probe(struct stm_ts_data *ts)
 	if (!ts->plat_data->shutdown_called)
 		schedule_delayed_work(&ts->work_read_info, msecs_to_jiffies(50));
 
-#if !IS_ENABLED(CONFIG_SAMSUNG_PRODUCT_SHIP)
+#if 1//!IS_ENABLED(CONFIG_SAMSUNG_PRODUCT_SHIP)
 	stm_ts_tool_proc_init(ts);
 #endif
 	return 0;
@@ -2797,7 +2797,7 @@ int stm_ts_remove(struct stm_ts_data *ts)
 {
 	input_info(true, &ts->client->dev, "%s\n", __func__);
 
-#if !IS_ENABLED(CONFIG_SAMSUNG_PRODUCT_SHIP)
+#if 1//!IS_ENABLED(CONFIG_SAMSUNG_PRODUCT_SHIP)
 	stm_ts_tool_proc_remove();
 #endif
 	mutex_lock(&ts->modechange);
